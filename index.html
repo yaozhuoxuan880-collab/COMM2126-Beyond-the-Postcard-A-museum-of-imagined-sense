@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#182525">
+  <meta name="description" content="Beyond the Postcard: an interactive five-gallery museum of imagined senses, promotional photographs, and visitors' views.">
+  <title>Beyond the Postcard · A Museum of Imagined Senses</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="museum" aria-label="Walkable three-dimensional digital museum"></canvas>
+  <div class="scene-veil" aria-hidden="true"></div><div class="reticle" aria-hidden="true">◦</div>
+  <header class="masthead">
+    <button type="button" class="museum-brand" id="brand-home" aria-label="Return to entrance"><span class="brand-star">✳</span><span>BEYOND THE<br><strong>POSTCARD</strong></span></button>
+    <nav class="masthead-nav" aria-label="Museum navigation">
+      <span id="visit-count" class="visit-counter">00 / 05 EXPLORED</span>
+      <button type="button" class="mast-button" id="nav-galleries">GALLERIES <span aria-hidden="true">⌄</span></button>
+      <button type="button" class="mast-button" id="nav-collection">COLLECTION</button>
+      <button type="button" class="mast-button nav-finale" id="nav-finale">FINAL ROOM</button>
+      <button type="button" class="mast-button mast-help" id="nav-help" aria-label="Visitor guide">?</button>
+    </nav>
+  </header>
+  <div id="gallery-nav" class="gallery-nav hidden" role="menu" aria-label="Gallery shortcuts"></div>
+  <div class="location-hud" id="location-hud"><span class="location-sigil">✧</span><div><small>YOU ARE EXPLORING</small><strong id="room-label">The Entrance Hall</strong></div></div>
+  <div class="interaction-tip hidden" id="interaction-tip"><kbd>E</kbd><span id="tip-label">Examine artwork</span></div>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <footer class="walk-hud"><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> MOVE</span><i></i><span>◎ DRAG / MOUSE TO LOOK</span><i></i><span><kbd>E</kbd> EXAMINE</span><i></i><span><kbd>ESC</kbd> RELEASE</span></footer>
+  <div class="touch-pad" id="touch-pad"><div><button type="button" data-move="forward">↑</button><div><button type="button" data-move="left">←</button><button type="button" data-move="backward">↓</button><button type="button" data-move="right">→</button></div></div><button type="button" id="touch-examine">EXAMINE</button></div>
+
+  <section class="intro-overlay" id="intro" aria-labelledby="intro-title">
+    <div class="intro-art" aria-hidden="true"><div class="intro-card"><div class="intro-card-inner"><span>AN UNFINISHED POSTCARD</span><div>✳</div><i>LOOK CLOSER</i></div></div></div>
+    <div class="intro-copy">
+      <p class="eyebrow">AN INTERACTIVE MUSEUM · EST. 2026</p>
+      <h1 id="intro-title">Beyond<br><em>the Postcard</em></h1>
+      <p class="intro-subtitle">A Museum of Imagined Senses</p>
+      <div class="intro-divider"></div>
+      <div class="intro-reading">
+        <p>Most journeys begin long before we arrive. Sometimes, all it takes is a photograph.</p>
+        <p>A beautiful landscape can make us imagine the sounds of the wind, the warmth of water, or what it feels like to stand somewhere we have never been.</p>
+        <p><em>But where do these imagined sensations come from?</em> From the photograph? From the place? Or from our own memories?</p>
+        <p>Explore five destinations, compare two perspectives on each, and discover what might remain beyond the frame. There are no right or wrong feelings.</p>
+      </div>
+      <label class="intro-question" for="opening-confidence">How confidently can you imagine a place's sensations from a photograph?</label>
+      <div class="intro-confidence"><span>NOT CONFIDENT</span><input type="range" id="opening-confidence" min="1" max="5" value="3"><b id="opening-confidence-value">3 / 5</b><span>VERY CONFIDENT</span></div>
+      <div class="intro-actions"><button type="button" class="button-primary" id="enter-museum">ENTER THE MUSEUM <span>↗</span></button><small>FIVE GALLERIES · FREE EXPLORATION · NO DATA UPLOAD</small></div>
+    </div>
+  </section>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-scrim" data-action="close"></div><section id="modal-content" class="modal-content"></section></div>
+  <script src="embedded_images.js" defer></script>
+  <script src="museum.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+Beyond the Postcard · 五感互动博物馆
+================================
+
+【运行网站】
+1. 解压 ZIP，保持 index.html、styles.css、museum.js、embedded_images.js、assets/ 在同一文件夹层级。
+2. 推荐使用电脑浏览器（Chrome、Safari、Edge、Firefox）打开网站。
+3. 如果直接双击 index.html 后照片不显示，可以用终端进入该文件夹，运行：
+      python3 -m http.server 8000
+   然后打开 http://localhost:8000 。
+
+【上传 GitHub Pages】
+1. 登录 github.com，新建 Repository（仓库）。
+2. 上传解压后文件夹里面的全部内容（注意是文件夹“里面”的文件，index.html 应在仓库根目录）。
+3. 检查 assets/ 文件夹和里面十张照片也上传了。
+4. 进入 Settings → Pages → Build and deployment，选择 Deploy from a branch。
+5. Branch 选 main，Folder 选 /(root)，点击 Save。
+6. 等网站发布，打开 GitHub 提供的 Pages 地址即可交给老师访问。
+
+【互动流程】
+前言引入 → 进入 3D 博物馆 → 五个展馆（任意顺序）→ 每馆 8 个 Stage →
+收集五张 Sensory Postcards → Become the Curator → Final Reflection →
+Museum Exit 的 Final Sensory Receipt（可以通过浏览器打印 / 保存 PDF）。
+
+【操作】
+- W A S D：走路；鼠标 / 拖动：转头；E：检查附近的作品；Esc：释放鼠标或关闭弹层。
+- 也可以点击右上角 Galleries 直接选择展馆；Collection 查看明信片。
+- 五个馆全部完成后 Final Room 开放。
+- 浏览器本地保存你的互动回答。没有账户，不上传答案。
+- 点击 ? → Reset My Visit 可清除本地记录并重来。
+
+【你提供的照片对应关系】
+希腊：greece_promo.jpg / greece_visitor.jpg
+中国：china_promo.jpg / china_visitor.jpg
+冰岛：iceland_promo.jpg / iceland_visitor.jpg
+英国：uk_promo.jpg / uk_visitor.jpg
+西班牙：spain_promo.jpg / spain_visitor.jpg
+
+【注释】
+这是基于原来 Museum of Missing Senses 的 WebGL 漫游引擎改造的新版本。
+三篇课程核心阅读没有直接写到用户的题目里，而是融入互动结构；理论分析留给 Academic Reflection。
+
+【图片显示修复】
+本版新增 embedded_images.js：Mac 上直接双击 index.html 打开 Chrome，3D 画框照片也能加载。
+请不要删除 embedded_images.js，上传 GitHub Pages 时也要上传这个文件。
+图片原文件仍在 assets/，GitHub Pages 会正常使用 assets/ 内的照片。
+如果以后自己换了 assets/ 里的图片，建议先用本地服务器预览新照片，或者重新生成 embedded_images.js。
